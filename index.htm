@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubscriptionGateway - Premium AI Tools at Unbeatable Prices</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #00ff6a;
+            --neon-green: #80ff17;
+            --dark-bg: #0a0a0a;
+            --darker-bg: #050505;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --text-white: #ffffff;
+            --text-gray: #b0b0b0;
+            --border-glow: rgba(0, 200, 83, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--darker-bg);
+            color: var(--text-white);
+            overflow-x: hidden;
+        }
+
+        /* ===== LOGO ANIMATION ===== */
+        .logo-animation-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--darker-bg);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .logo-animation-container.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.8s ease;
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            opacity: 0;
+            box-shadow: 0 0 10px var(--primary-green), 0 0 20px var(--neon-green);
+            animation: particleFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes particleFloat {
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: translateY(0) scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(-100px) scale(1);
+            }
+        }
+
+        .gateway-ring {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            animation: gatewayForm 2s ease-out forwards;
+        }
+
+        .gateway-ring::before {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-green);
+            opacity: 0;
+            animation: ringGlow 2s ease-out 1s forwards;
+        }
+
+        @keyframes gatewayForm {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 0;
+                border-color: transparent;
+            }
+
+            50% {
+                transform: scale(1.2) rotate(180deg);
+                opacity: 0.5;
+                border-color: var(--primary-green);
+            }
+
+            100% {
+                transform: scale(1) rotate(360deg);
+                opacity: 1;
+                border-color: var(--primary-green);
+                box-shadow: 0 0 30px var(--border-glow), inset 0 0 30px var(--border-glow);
+            }
+        }
+
+        @keyframes ringGlow {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            100% {
+                opacity: 0.6;
+                transform: scale(1);
+            }
+        }
+
+        .logo-text-anim {
+            position: relative;
+            z-index: 10;
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: textReveal 1.5s ease-out 2s forwards;
+            background: linear-gradient(135deg, var(--text-white) 0%, var(--primary-green) 50%, var(--neon-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* CENTER TEXT */
+        .center-logo-text {
+            position: absolute;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .center-logo-text h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin: 0;
+            line-height: 1;
+            background: linear-gradient(90deg, #ffffff, #00ff88, #00ffaa, #ffffff);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 4s linear infinite;
+            letter-spacing: 2px;
+        }
+
+        .center-logo-text h2 {
+            font-size: 28px;
+            margin-top: 10px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00ff88, #ffffff, #00ffaa);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 4s linear infinite;
+            letter-spacing: 3px;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 300%;
+            }
+        }
+
+        @keyframes shineMove {
+            0% {
+                left: -200px;
+            }
+
+            100% {
+                left: 500px;
+            }
+        }
+
+        @keyframes floatParticle {
+            0% {
+                transform: translateY(0px);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px) {
+            .gateway-ring {
+                width: 280px;
+                height: 280px;
+            }
+
+            .center-logo-text h1 {
+                font-size: 28px;
+            }
+
+            .center-logo-text h2 {
+                font-size: 20px;
+            }
+        }
+
+        .logo-text-anim .char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: charReveal 0.1s ease-out forwards;
+        }
+
+        @keyframes charReveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes textReveal {
+            0% {
+                opacity: 0;
+                filter: blur(10px);
+            }
+
+            100% {
+                opacity: 1;
+                filter: blur(0);
+            }
+        }
+
+        .shine-sweep {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shineSweep 1s ease-out 3.5s forwards;
+        }
+
+        @keyframes shineSweep {
+            to {
+                left: 100%;
+            }
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 0.7rem 5%;
+            background: rgba(5, 5, 5, 0.95);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--text-white), var(--primary-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            color: var(--primary-green);
+            -webkit-text-fill-color: var(--primary-green);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-green);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-white);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: var(--text-white);
+            transition: all 0.3s ease;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 8rem 5% 4rem;
+            overflow: hidden;
+        }
+
+        .hero-bg-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .hero-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            animation: floatShape 8s ease-in-out infinite;
+        }
+
+        .hero-shape:nth-child(1) {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--primary-green), transparent);
+            top: -10%;
+            right: -10%;
+            animation-delay: 0s;
+        }
+
+        .hero-shape:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, #1a1a2e, transparent);
+            bottom: -10%;
+            left: -10%;
+            animation-delay: 2s;
+        }
+
+        .hero-shape:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 200, 83, 0.3), transparent);
+            top: 40%;
+            left: 30%;
+            animation-delay: 4s;
+        }
+
+        @keyframes floatShape {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -30px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.2rem;
+            background: rgba(0, 200, 83, 0.1);
+            border: 1px solid rgba(0, 200, 83, 0.3);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--primary-green);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary-green), var(--neon-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-green), #00E676);
+            color: var(--dark-bg);
+            box-shadow: 0 10px 40px rgba(0, 200, 83, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(0, 200, 83, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-white);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary-green);
+            color: var(--primary-green);
+            transform: translateY(-3px);
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.8s both;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .trust-badge i {
+            color: var(--primary-green);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 span {
+            background: linear-gradient(135deg, var(--primary-green), var(--neon-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-green), var(--neon-green));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .about-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 200, 83, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-card i {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* ===== SHOP SECTION ===== */
+
+        .card-container {
+            margin: 28px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        .card {
+            background: #0b0f0d;
+            border: 1px solid rgba(0, 255, 120, 0.18);
+            border-radius: 18px;
+            padding: 28px;
+            min-height: 260px;
+            box-shadow: 0 0 25px rgba(0, 255, 120, 0.06);
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #cfd4d1;
+            margin-bottom: 28px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            border: none;
+            padding: 14px 22px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+            display: inline-block;
+        }
+
+        .cart-btn {
+            background: #171a18;
+            color: #ffffff;
+            border: 1px solid #333;
+        }
+
+        .cart-btn:hover {
+            background: #222622;
+        }
+
+        .buy-btn {
+            background: #00d86a;
+            color: #000000;
+        }
+
+        .buy-btn:hover {
+            background: #00f078;
+            transform: scale(1.04);
+        }
+
+        @media (max-width: 1100px) {
+            .card-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                
+            }
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            padding: 6rem 5%;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .faq-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(0, 200, 83, 0.2);
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+            color: var(--primary-green);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.2rem 1.2rem;
+            max-height: 200px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .whatsapp-card {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            transition: all 0.4s ease;
+        }
+
+        .whatsapp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .whatsapp-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .whatsapp-card p {
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            color: #25D366;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--text-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-green);
+            color: var(--primary-green);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 3rem 5%;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--text-white), var(--primary-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social a {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: var(--primary-green);
+            transform: translateY(-3px);
+        }
+
+        .footer p {
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: var(--darker-bg);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                transition: right 0.4s ease;
+                border-left: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .shop-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--darker-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-green);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--neon-green);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Logo Animation -->
+    <div class="logo-animation-container" id="logoAnim">
+        <div class="particles" id="particles"></div>
+        <div class="gateway-ring"></div>
+        <!-- Center Logo Text -->
+        <div class="center-logo-text">
+            <h1>Subscription</h1>
+            <h2>Gateway</h2>
+        </div>
+
+        <div class="logo-text-anim" id="logoText">
+            <span class="shine-sweep"></span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <i class="fas fa-gateway"></i>
+            SubscriptionGateway
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="hero-shape"></div>
+            <div class="hero-shape"></div>
+            <div class="hero-shape"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-bolt"></i>
+                Trusted by 1000+ users worldwide
+            </div>
+            <h1>Get Premium AI Tools at <span>50-90% OFF</span></h1>
+            <p>Access ChatGPT, Claude, Midjourney & more at unbeatable prices. Your gateway to affordable premium
+                digital services.</p>
+            <div class="hero-buttons">
+                <a href="#shop" class="btn btn-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                    Shop Now
+                </a>
+                <a href="#shop" class="btn btn-secondary">
+                    <i class="fas fa-tag"></i>
+                    View Deals
+                </a>
+            </div>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    100% Secure
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-clock"></i>
+                    Instant Delivery
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-headset"></i>
+                    24/7 Support
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-undo"></i>
+                    Money Back Guarantee
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-header fade-in">
+            <h2>Why Choose <span>SubscriptionGateway</span>?</h2>
+            <p>We make premium AI tools accessible to everyone by offering group subscriptions and exclusive deals at
+                the lowest prices.</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-card fade-in">
+                <i class="fas fa-bolt"></i>
+                <h3>Instant Access</h3>
+                <p>Get immediate access to your purchased subscriptions. No waiting, no delays. Start using your premium
+                    tools right away.</p>
+            </div>
+            <div class="about-card fade-in">
+                <i class="fas fa-tags"></i>
+                <h3>Affordable Pricing</h3>
+                <p>Save up to 90% on premium subscriptions through our group buying model. Why pay full price when you
+                    can get the same access for less?</p>
+            </div>
+            <div class="about-card fade-in">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Trusted Service</h3>
+                <p>Join thousands of satisfied customers who trust us for their AI tool needs. We guarantee authentic
+                    subscriptions and reliable support.</p>
+            </div>
+            <div class="about-card fade-in">
+                <i class="fas fa-users"></i>
+                <h3>Group Subscriptions</h3>
+                <p>We leverage group buying power to negotiate the best deals with AI tool providers, passing the
+                    savings directly to you.</p>
+            </div>
+            <div class="about-card fade-in">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Our dedicated support team is available round the clock to assist you with any queries or issues you
+                    may face.</p>
+            </div>
+            <div class="about-card fade-in">
+                <i class="fas fa-undo"></i>
+                <h3>Money Back Guarantee</h3>
+                <p>Not satisfied? We offer a hassle-free refund policy within 7 days of purchase. Your satisfaction is
+                    our priority.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="shop" id="shop">
+        <div class="section-header fade-in">
+            <h2>Explore Our <span>AI Tools</span></h2>
+            <p>Browse our collection of premium AI tools and software subscriptions at unbeatable prices.</p>
+        </div>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h2>ChatGPT Plus</h2>
+                <p>Advanced AI chatbot with GPT-4 access, faster responses, and priority features.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20ChatGPT%20Plus%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Claude Pro</h2>
+                <p>Powerful AI assistant with extended context and advanced reasoning.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Claude%20Pro%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Midjourney</h2>
+                <p>AI image generation tool. Create stunning art, logos, and visuals with text prompts.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Midjourney%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Canva Pro</h2>
+                <p>Professional design tool with premium templates, stock photos, and brand kits.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Canva%20Pro%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>CapCut Pro</h2>
+                <p>Premium video editing tool with advanced effects, templates, and export quality.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20CapCut%20Pro%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Grammarly Pro</h2>
+                <p>AI writing assistant for grammar, tone, clarity, and professional writing.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Grammarly%20Pro%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>QuillBot Premium</h2>
+                <p>Paraphrasing, grammar checking, summarizing, and AI writing improvement tool.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20QuillBot%20Premium%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Envato Elements</h2>
+                <p>Unlimited creative assets including templates, graphics, videos, and fonts.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Envato%20Elements%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Freepik Premium</h2>
+                <p>Access premium vectors, photos, PSD files, icons, and design resources.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Freepik%20Premium%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Leonardo AI</h2>
+                <p>Generate high-quality AI images, characters, product visuals, and creative assets.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Leonardo%20AI%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Runway AI</h2>
+                <p>AI video generation and editing tool for creators, brands, and marketers.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Runway%20AI%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Pika AI</h2>
+                <p>Create AI videos from text prompts, images, and creative ideas easily.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Pika%20AI%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>ElevenLabs</h2>
+                <p>AI voice generation tool with realistic voices for videos and content.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20ElevenLabs%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Notion AI</h2>
+                <p>Smart productivity workspace with AI writing, planning, and organization tools.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Notion%20AI%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Writesonic</h2>
+                <p>AI content writing tool for blogs, ads, captions, and marketing copy.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Writesonic%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Copy AI</h2>
+                <p>Generate marketing copy, sales content, email content, and social media text.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Copy%20AI%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Jasper AI</h2>
+                <p>AI writing platform for businesses, marketers, and content creators.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Jasper%20AI%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Veed Pro</h2>
+                <p>Online video editor with subtitles, templates, AI tools, and premium export.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Veed%20Pro%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>InVideo AI</h2>
+                <p>Create professional videos from prompts, scripts, and templates with AI.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20InVideo%20AI%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Perplexity Pro</h2>
+                <p>AI search assistant for research, answers, sources, and smart information finding.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Perplexity%20Pro%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Gemini Advanced</h2>
+                <p>Google AI assistant for writing, coding, research, planning, and productivity.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Gemini%20Advanced%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Adobe Express</h2>
+                <p>Design tool for creating social media posts, videos, banners, and brand content.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Adobe%20Express%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>VistaCreate Pro</h2>
+                <p>Create premium graphics, social media designs, posters, and marketing visuals.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20VistaCreate%20Pro%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Motion Array</h2>
+                <p>Premium video templates, stock footage, music, sound effects, and presets.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Motion%20Array%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Storyblocks</h2>
+                <p>Unlimited stock videos, audio, images, templates, and creative resources.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Storyblocks%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+              <div class="card">
+                <h2>Storyblocks</h2>
+                <p>Unlimited stock videos, audio, images, templates, and creative resources.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Storyblocks%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+              <div class="card">
+                <h2>Storyblocks</h2>
+                <p>Unlimited stock videos, audio, images, templates, and creative resources.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Storyblocks%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+              <div class="card">
+                <h2>Storyblocks</h2>
+                <p>Unlimited stock videos, audio, images, templates, and creative resources.</p>
+                <div class="buttons">
+                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
+                    <a href="https://wa.me/919999999999?text=Hello%20mujhe%20Storyblocks%20buy%20karna%20hai"
+                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+        <div class="shop-grid" id="shopGrid">
+            <!-- Products will be inserted by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header fade-in">
+            <h2>Get In <span>Touch</span></h2>
+            <p>Have questions? We're here to help. Reach out to us anytime.</p>
+        </div>
+        <div class="contact-container">
+            <div class="faq-section fade-in">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is this safe and legal?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We provide legitimate group subscriptions and reseller accounts. All tools are 100%
+                        authentic and safe to use.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How do I get access after purchase?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        After purchase, you'll receive login credentials or an invitation link within minutes via
+                        WhatsApp or email.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We accept UPI, Paytm, Google Pay, PhonePe, Bank Transfer, and all major payment methods.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What is your refund policy?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We offer a 7-day money-back guarantee if you face any issues with your subscription that we
+                        cannot resolve.
+                    </div>
+                </div>
+            </div>
+            <div class="contact-info fade-in">
+                <div class="whatsapp-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>Chat With Us</h3>
+                    <p>Have questions? Message us on WhatsApp for instant support and quick responses.</p>
+                    <a href="https://wa.me/9471958562?text=Hi%20SubscriptionGateway,%20I%20have%20a%20question%20about%20your%20services."
+                        class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Chat on WhatsApp
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/subscriptiongateway/#" class="social-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="mailto:SubscriptionGateway@subscriptiongateway.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">SubscriptionGateway</div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#shop">Shop</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/subscriptiongateway/#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="https://x.com/subscripti60151"><i class="fab fa-twitter"></i></a>
+                <a href="www.linkedin.com/in/subscription-gateway-b2b662406"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 SubscriptionGateway. All rights reserved. Premium AI Tools at Unbeatable Prices.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ===== PRODUCTS DATA =====
+        const products = [
+
+        ];
+
+        // ===== RENDER PRODUCTS =====
+        function renderProducts() {
+            const grid = document.getElementById('shopGrid');
+            grid.innerHTML = products.map(product => `
+                <div class="product-card fade-in">
+                    <span class="discount-badge">${product.discount}</span>
+                    <div class="product-image">
+                        <i class="fas ${product.icon}"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p>${product.desc}</p>
+                        <div class="price-container">
+                            <span class="original-price">${product.original}</span>
+                            <span class="discounted-price">${product.price}</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-cart" onclick="addToCart('${product.name}')">
+                                <i class="fas fa-cart-plus"></i>
+                                Add to Cart
+                            </button>
+                            <a href="https://wa.me/9471958562?text=I%20want%20this%20${encodeURIComponent(product.name)}%20subscription.%20Please%20give%20me%20details." class="btn btn-buy" target="_blank">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ===== CART FUNCTIONALITY =====
+        let cart = [];
+        function addToCart(productName) {
+            cart.push(productName);
+            // Simple alert for demo - in production, you'd show a toast notification
+            const btn = event.target.closest('.btn-cart');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Added!';
+            btn.style.background = 'rgba(0, 200, 83, 0.2)';
+            btn.style.borderColor = 'var(--primary-green)';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                btn.style.borderColor = '';
+            }, 1500);
+        }
+
+        // ===== LOGO ANIMATION =====
+        function initLogoAnimation() {
+            const container = document.getElementById('logoAnim');
+            const textEl = document.getElementById('logoText');
+            const particlesContainer = document.getElementById('particles');
+            const text = "SubscriptionGateway";
+
+            // Create particles
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 2 + 's';
+                particle.style.animationDuration = (2 + Math.random() * 2) + 's';
+                particlesContainer.appendChild(particle);
+            }
+
+            // Create text with character animation
+            text.split('').forEach((char, index) => {
+                const span = document.createElement('span');
+                span.className = 'char';
+                span.textContent = char;
+                span.style.animationDelay = (2.5 + index * 0.05) + 's';
+                textEl.appendChild(span);
+            });
+
+            // Hide animation after completion
+            setTimeout(() => {
+                container.classList.add('hidden');
+                setTimeout(() => {
+                    container.style.display = 'none';
+                }, 800);
+            }, 5000);
+        }
+
+        // ===== FAQ TOGGLE =====
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(i => {
+                if (i !== item) i.classList.remove('active');
+            });
+            item.classList.toggle('active');
+        }
+
+        // ===== SCROLL ANIMATIONS =====
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        }
+
+        // ===== NAVBAR SCROLL =====
+        function initNavbarScroll() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // ===== MOBILE MENU =====
+        function initMobileMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // ===== SMOOTH SCROLL =====
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        }
+
+        // ===== INITIALIZE =====
+        document.addEventListener('DOMContentLoaded', () => {
+            initLogoAnimation();
+            renderProducts();
+            initScrollAnimations();
+            initNavbarScroll();
+            initMobileMenu();
+            initSmoothScroll();
+        });
+    </script>
+</body>
+
+</html>'''

@@ -640,8 +640,7 @@
 
         /* ===== SHOP SECTION ===== */
 
-        .card-container {
-            margin: 28px;
+         .card-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 28px;
@@ -652,13 +651,135 @@
             border: 1px solid rgba(0, 255, 120, 0.18);
             border-radius: 18px;
             padding: 28px;
-            min-height: 260px;
+            min-height: 310px;
             box-shadow: 0 0 25px rgba(0, 255, 120, 0.06);
+            transition: 0.3s ease;
+
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(0, 255, 120, 0.45);
+            box-shadow: 0 0 35px rgba(0, 255, 120, 0.12);
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(45px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .card:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .card:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        .card:nth-child(9) {
+            animation-delay: 0.9s;
+        }
+
+        .card:nth-child(10) {
+            animation-delay: 1s;
+        }
+
+        .card:nth-child(11) {
+            animation-delay: 1.1s;
+        }
+
+        .card:nth-child(12) {
+            animation-delay: 1.2s;
+        }
+
+        .card:nth-child(13) {
+            animation-delay: 1.3s;
+        }
+
+        .card:nth-child(14) {
+            animation-delay: 1.4s;
+        }
+
+        .card:nth-child(15) {
+            animation-delay: 1.5s;
+        }
+
+        .card:nth-child(16) {
+            animation-delay: 1.6s;
+        }
+
+        .card:nth-child(17) {
+            animation-delay: 1.7s;
+        }
+
+        .card:nth-child(18) {
+            animation-delay: 1.8s;
+        }
+
+        .card:nth-child(19) {
+            animation-delay: 1.9s;
+        }
+
+        .card:nth-child(20) {
+            animation-delay: 2s;
+        }
+
+        .card:nth-child(21) {
+            animation-delay: 2.1s;
+        }
+
+        .card:nth-child(22) {
+            animation-delay: 2.2s;
+        }
+
+        .card:nth-child(23) {
+            animation-delay: 2.3s;
+        }
+
+        .card:nth-child(24) {
+            animation-delay: 2.4s;
+        }
+
+        .card:nth-child(25) {
+            animation-delay: 2.5s;
         }
 
         .card h2 {
             font-size: 24px;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
             color: #ffffff;
         }
 
@@ -666,25 +787,46 @@
             font-size: 16px;
             line-height: 1.5;
             color: #cfd4d1;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
+        }
+
+        .price {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 26px;
+        }
+
+        .old-price {
+            color: #7b7f7d;
+            text-decoration: line-through;
+            font-size: 18px;
+        }
+
+        .new-price {
+            color: #00d86a;
+            font-size: 28px;
+            font-weight: bold;
         }
 
         .buttons {
             display: flex;
             gap: 12px;
             align-items: center;
+            flex-wrap: nowrap;
         }
 
         .btn {
             text-decoration: none;
-            border: none;
-            padding: 14px 22px;
+            padding: 14px 18px;
             border-radius: 30px;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
-            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
             transition: 0.3s ease;
-            display: inline-block;
         }
 
         .cart-btn {
@@ -695,6 +837,7 @@
 
         .cart-btn:hover {
             background: #222622;
+            border-color: #444;
         }
 
         .buy-btn {
@@ -707,25 +850,34 @@
             transform: scale(1.04);
         }
 
-        @media (max-width: 1100px) {
+        @media (max-width: 1200px) {
             .card-container {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 850px) {
             .card-container {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        @media (max-width: 520px) {
+        @media (max-width: 550px) {
+            body {
+                padding: 18px;
+            }
+
             .card-container {
                 grid-template-columns: 1fr;
             }
 
-            body {
-                
+            .card {
+                padding: 24px;
+            }
+
+            .btn {
+                padding: 12px 14px;
+                font-size: 14px;
             }
         }
 
@@ -1176,292 +1328,362 @@
             <p>Browse our collection of premium AI tools and software subscriptions at unbeatable prices.</p>
         </div>
 
-        <div class="card-container">
+       <div class="card-container">
 
             <div class="card">
                 <h2>ChatGPT Plus</h2>
                 <p>Advanced AI chatbot with GPT-4 access, faster responses, and priority features.</p>
+                <div class="price">
+                    <span class="old-price">$20/mo</span>
+                    <span class="new-price">$5/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20ChatGPT%20Plus%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20ChatGPT%20Plus.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
                 <h2>Claude Pro</h2>
                 <p>Powerful AI assistant with extended context and advanced reasoning.</p>
+                <div class="price">
+                    <span class="old-price">$20/mo</span>
+                    <span class="new-price">$6/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Claude%20Pro%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Claude%20Pro.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Midjourney</h2>
+                <h2>Preplexity</h2>
                 <p>AI image generation tool. Create stunning art, logos, and visuals with text prompts.</p>
+                <div class="price">
+                    <span class="old-price">$30/mo</span>
+                    <span class="new-price">$8/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Midjourney%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Midjourney.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
                 <h2>Canva Pro</h2>
                 <p>Professional design tool with premium templates, stock photos, and brand kits.</p>
+                <div class="price">
+                    <span class="old-price">$13/mo</span>
+                    <span class="new-price">$3/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Canva%20Pro%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Canva%20Pro.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
                 <h2>CapCut Pro</h2>
                 <p>Premium video editing tool with advanced effects, templates, and export quality.</p>
+                <div class="price">
+                    <span class="old-price">$10/mo</span>
+                    <span class="new-price">$3/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20CapCut%20Pro%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20CapCut%20Pro.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Grammarly Pro</h2>
+                <h2>Filmora 15</h2>
                 <p>AI writing assistant for grammar, tone, clarity, and professional writing.</p>
+                <div class="price">
+                    <span class="old-price">$30/mo</span>
+                    <span class="new-price">$5/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Grammarly%20Pro%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Grammarly%20Pro.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>QuillBot Premium</h2>
+                <h2>Open Art</h2>
                 <p>Paraphrasing, grammar checking, summarizing, and AI writing improvement tool.</p>
+                <div class="price">
+                    <span class="old-price">$20/mo</span>
+                    <span class="new-price">$4/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20QuillBot%20Premium%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20QuillBot%20Premium.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Envato Elements</h2>
+                <h2>Manus Ai</h2>
                 <p>Unlimited creative assets including templates, graphics, videos, and fonts.</p>
+                <div class="price">
+                    <span class="old-price">$33/mo</span>
+                    <span class="new-price">$7/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Envato%20Elements%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Envato%20Elements.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Freepik Premium</h2>
+                <h2>Supabase</h2>
                 <p>Access premium vectors, photos, PSD files, icons, and design resources.</p>
+                <div class="price">
+                    <span class="old-price">$12/mo</span>
+                    <span class="new-price">$3/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Freepik%20Premium%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Freepik%20Premium.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Leonardo AI</h2>
+                <h2>Adobe creative cloude</h2>
                 <p>Generate high-quality AI images, characters, product visuals, and creative assets.</p>
+                <div class="price">
+                    <span class="old-price">$24/mo</span>
+                    <span class="new-price">$6/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Leonardo%20AI%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Leonardo%20AI.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Runway AI</h2>
+                <h2>Kling Ai</h2>
                 <p>AI video generation and editing tool for creators, brands, and marketers.</p>
+                <div class="price">
+                    <span class="old-price">$15/mo</span>
+                    <span class="new-price">$5/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Runway%20AI%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Runway%20AI.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Pika AI</h2>
+                <h2>Antigravity</h2>
                 <p>Create AI videos from text prompts, images, and creative ideas easily.</p>
+                <div class="price">
+                    <span class="old-price">$10/mo</span>
+                    <span class="new-price">$3/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Pika%20AI%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Pika%20AI.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
                 <h2>ElevenLabs</h2>
                 <p>AI voice generation tool with realistic voices for videos and content.</p>
+                <div class="price">
+                    <span class="old-price">$22/mo</span>
+                    <span class="new-price">$6/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20ElevenLabs%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20ElevenLabs.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Notion AI</h2>
+                <h2>Picart</h2>
                 <p>Smart productivity workspace with AI writing, planning, and organization tools.</p>
+                <div class="price">
+                    <span class="old-price">$10/mo</span>
+                    <span class="new-price">$3/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Notion%20AI%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Notion%20AI.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Writesonic</h2>
+                <h2>Google Veo3 Ultra</h2>
                 <p>AI content writing tool for blogs, ads, captions, and marketing copy.</p>
+                <div class="price">
+                    <span class="old-price">$19/mo</span>
+                    <span class="new-price">$5/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Writesonic%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Writesonic.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Copy AI</h2>
+                <h2>Freepik ai</h2>
                 <p>Generate marketing copy, sales content, email content, and social media text.</p>
+                <div class="price">
+                    <span class="old-price">$36/mo</span>
+                    <span class="new-price">$7/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Copy%20AI%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Copy%20AI.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Jasper AI</h2>
+                <h2>Leonardo Ai</h2>
                 <p>AI writing platform for businesses, marketers, and content creators.</p>
+                <div class="price">
+                    <span class="old-price">$49/mo</span>
+                    <span class="new-price">$9/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Jasper%20AI%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Jasper%20AI.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Veed Pro</h2>
+                <h2>Vercel Pro</h2>
                 <p>Online video editor with subtitles, templates, AI tools, and premium export.</p>
+                <div class="price">
+                    <span class="old-price">$18/mo</span>
+                    <span class="new-price">$5/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Veed%20Pro%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Veed%20Pro.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>InVideo AI</h2>
+                <h2>Web Flow</h2>
                 <p>Create professional videos from prompts, scripts, and templates with AI.</p>
+                <div class="price">
+                    <span class="old-price">$25/mo</span>
+                    <span class="new-price">$6/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20InVideo%20AI%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20InVideo%20AI.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Perplexity Pro</h2>
+                <h2>Replit</h2>
                 <p>AI search assistant for research, answers, sources, and smart information finding.</p>
+                <div class="price">
+                    <span class="old-price">$20/mo</span>
+                    <span class="new-price">$5/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Perplexity%20Pro%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Perplexity%20Pro.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
                 <h2>Gemini Advanced</h2>
                 <p>Google AI assistant for writing, coding, research, planning, and productivity.</p>
+                <div class="price">
+                    <span class="old-price">$20/mo</span>
+                    <span class="new-price">$5/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Gemini%20Advanced%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Gemini%20Advanced.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Adobe Express</h2>
+                <h2>Envato</h2>
                 <p>Design tool for creating social media posts, videos, banners, and brand content.</p>
+                <div class="price">
+                    <span class="old-price">$10/mo</span>
+                    <span class="new-price">$3/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Adobe%20Express%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Adobe%20Express.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
                 <h2>VistaCreate Pro</h2>
                 <p>Create premium graphics, social media designs, posters, and marketing visuals.</p>
+                <div class="price">
+                    <span class="old-price">$13/mo</span>
+                    <span class="new-price">$3/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20VistaCreate%20Pro%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20VistaCreate%20Pro.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
                 <h2>Motion Array</h2>
                 <p>Premium video templates, stock footage, music, sound effects, and presets.</p>
+                <div class="price">
+                    <span class="old-price">$29/mo</span>
+                    <span class="new-price">$7/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Motion%20Array%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Motion%20Array.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
 
             <div class="card">
                 <h2>Storyblocks</h2>
                 <p>Unlimited stock videos, audio, images, templates, and creative resources.</p>
+                <div class="price">
+                    <span class="old-price">$30/mo</span>
+                    <span class="new-price">$8/mo</span>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Storyblocks%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
+                    <a href="https://wa.me/9471958562?text=I%20want%20to%20buy%20Storyblocks.%20Please%20share%20details."
+                        target="_blank" class="btn buy-btn">⚡ Buy Now</a>
                 </div>
             </div>
-
-              <div class="card">
-                <h2>Storyblocks</h2>
-                <p>Unlimited stock videos, audio, images, templates, and creative resources.</p>
-                <div class="buttons">
-                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Storyblocks%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
-                </div>
-            </div>
-
-              <div class="card">
-                <h2>Storyblocks</h2>
-                <p>Unlimited stock videos, audio, images, templates, and creative resources.</p>
-                <div class="buttons">
-                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Storyblocks%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
-                </div>
-            </div>
-
-              <div class="card">
-                <h2>Storyblocks</h2>
-                <p>Unlimited stock videos, audio, images, templates, and creative resources.</p>
-                <div class="buttons">
-                    <a href="#" class="btn cart-btn">🛒 Add to Cart</a>
-                    <a href="https://wa.me/9471958562?text=Hello%20mujhe%20Storyblocks%20buy%20karna%20hai"
-                        class="btn buy-btn" target="_blank">⚡ Buy Now</a>
-                </div>
-            </div>
-
-            
 
         </div>
 
+
+        </div>
         <div class="shop-grid" id="shopGrid">
             <!-- Products will be inserted by JavaScript -->
         </div>
